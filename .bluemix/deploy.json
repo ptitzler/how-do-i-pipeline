@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "messages": {
-        "$i18n": "locales.yml"
+        "root": "./messages.yml"
     },
     "title": {
         "$ref": "#/messages/deploy.title"
@@ -15,15 +15,15 @@
     "type": "object",
     "properties": {
         "prod-region": {
-            "description": "The bluemix region",
+            "description": "The IBM Cloud region",
             "type": "string"
         },
         "prod-organization": {
-            "description": "The bluemix org",
+            "description": "The IBM Cloud org",
             "type": "string"
         },
         "prod-space": {
-            "description": "The bluemix space",
+            "description": "The IBM Cloud space",
             "type": "string"
         },
         "prod-app-name": {
