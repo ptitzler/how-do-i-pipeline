@@ -3,7 +3,7 @@ version: '2'
 template:
   name: 'Deploy app to Cloud Foundry'
   description: 'Deploy Node.js app to Cloud Foundry'
-  header: '![](toolchain.svg?localize)'
+  header: 'I am a header'
   icon: icon.svg
   required:
     - app-repo
