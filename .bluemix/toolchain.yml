@@ -7,11 +7,6 @@ template:
   icon: icon.svg
   required:
     - app-repo
-  info:
-    git url: >-
-      [https://github.com/ptitzler/cf-deploy-toolchain](https://github.com/ptitzler/cf-deploy-toolchain)
-    git branch: >-
-      [master](https://github.com/ptitzler/cf-deploy-toolchain/tree/master)
 toolchain:
   name: 'deploy-to-cloud-foundry-{{timestamp}}'
 services:
