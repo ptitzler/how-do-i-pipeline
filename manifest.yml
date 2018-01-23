@@ -1,8 +1,4 @@
 ---
-declared-services:
-  how-do-i-cloudantNoSQLDB:
-    label: cloudantNoSQLDB
-    plan: Lite
 applications:
 - name: how-do-i-demo-app
   buildpack: sdk-for-nodejs
@@ -10,5 +6,3 @@ applications:
   instances: 1
   disk_quota: 256M
   host: how-do-i-demo-app-${random-word}
-  services:
-  - how-do-i-cloudantNoSQLDB
