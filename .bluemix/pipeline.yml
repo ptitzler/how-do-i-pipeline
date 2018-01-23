@@ -1,21 +1,18 @@
 ---
 stages:
-- name: DEPLOY
+- name: 'Deploy to Cloud Foundry'
   inputs:
-  - type: job
-    stage: BUILD
-    job: Build
+  - type: git
+    branch: master
+    service: app-repo
   triggers:
-  - type: stage
+  - type: commit
   properties:
-  - name: CF_APP_NAME
-    value: undefined
-    type: text
-  - name: APP_URL
-    value: undefined
+  - name: CLOUDANT_SVC_NAME
+    value: how-do-i-cloudantNoSQLDB
     type: text
   jobs:
-  - name: Blue-Green Deploy
+  - name: Deploy
     type: deployer
     target:
       region_id: ${PROD_REGION_ID}
@@ -26,5 +23,4 @@ stages:
       #!/bin/bash
       # Push app
       cf create-service cloudantNoSQLDB Lite ${CLOUDANT_SVC_NAME}
-      cf push "${CF_APP}"
-      
+      cf push "${CF_APP_NAME}"   
